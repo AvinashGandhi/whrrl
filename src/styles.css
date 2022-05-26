@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css");
+
+.card-ui {
+    width: 100%;
+    
+}
+/* .card-ui .card {
+    width: 800px;
+    margin: auto;
+} */

@@ -1,0 +1,40 @@
+<div class="card-ui">
+    <div class="row mt-2">
+        <div class="col-lg-4" *ngFor="let data of result">
+            <div class="card mt-2">
+                <div class="card-header bg-primary">
+                    <h3 class="text-center text-white">Random Jokes Playlist</h3>
+                </div>
+                <div class="card-body">
+                    <h4>Setup:</h4>
+                    <p class="text-left">{{data.setup}}</p>
+                    <hr>
+                    <h4>PunchLine:</h4>
+                    <p class="text-left">{{data.punchline}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <div>
+        <h1>Create Playlist</h1>
+        <form [formGroup]="submitform" (ngSubmit)="createPlaylist(submitform);">
+            <label for="playlist">Name of List</label>
+            <input type="text" class="form-control" placeholder="Enter playlist name" formControlName="name">
+            <button type="submit">Create Playlist</button>
+        </form>
+    </div>
+    <div>
+        <h3>Playlist</h3>
+        <ul *ngFor="let data of addData;let i=index">
+            <li>{{data.playlistName}}</li>
+            <ul>
+                <li *ngFor="let x of data.PlaylistData">{{x.setup}}</li>
+                <li></li>
+            </ul>
+        </ul>
+    </div>
+</div>
